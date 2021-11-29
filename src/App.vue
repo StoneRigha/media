@@ -177,7 +177,7 @@ main{
 }
 .song-title span{
   font-weight: 400;
-  font-style: italic;
+
 }
 .controls{
   display: flex;
@@ -195,7 +195,7 @@ button{
 button:hover{
   opacity: 0.8;
 }
-.play{
+.play, .pause{
   font-size: 20px;
   font-weight: 700;
   padding: 15px 25px;
@@ -234,7 +234,7 @@ button:hover{
 .playlist .song:hover{
   color: #ff5858;
 }
-.playlist .song .playing{
+.playlist .song.playing{
   color: #fff;
   background-image: linear-gradient(to right, #cc2e5b, #ff5858);
 }
