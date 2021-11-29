@@ -55,6 +55,36 @@ export default {
           title: 'Land of The Free',
           artist: 'Ras Stone x Joey B@dass',
           src: require('./assets/land.mp3')
+        },
+        {
+          title: 'Lunar Shrill',
+          artist: 'Ras Stone',
+          src: require('./assets/Ras Stone.mp3')
+        },
+        {
+          title: 'Celestial Hypnosis',
+          artist: 'Ras Stone',
+          src: require('./assets/Ras Stone_2.mp3')
+        },
+        {
+          title: '26 Forever',
+          artist: 'Ras Stone',
+          src: require('./assets/26.mp3')
+        },
+        {
+          title: 'I Want Peace',
+          artist: 'Ras Stone',
+          src: require('./assets/peace.mp3')
+        },
+        {
+          title: 'Idle End',
+          artist: 'Ras Stone',
+          src: require('./assets/idle.mp3')
+        },
+        {
+          title: 'Difference',
+          artist: 'Ras Stone',
+          src: require('./assets/diff.mp3')
         }
       ],
       player: new Audio()
@@ -67,6 +97,9 @@ export default {
         this.player.src = this.current.src;
       }
       this.player.play();
+      this.player.addEventListener('ended', function(){
+        this.index++;
+      }.bind(this));
       this.isPlaying = true;
     },
     pause(){
@@ -122,5 +155,10 @@ header{
   padding: 15px;
   background-color: #212121;
   color: #fff;
+}
+main{
+  width: 100%;
+  max-width: 768px;
+  margin: 0px auto;
 }
 </style>
